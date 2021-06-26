@@ -11,7 +11,7 @@ public class OrdenarArray {
                     int aux = arrayInteiros[i];
                     arrayInteiros[i]=arrayInteiros[i-1];
                     arrayInteiros[i-1]=aux;
-                    System.out.println("Ordem Atual"+arrayInteiros[0]+" "+arrayInteiros[1]+" "+arrayInteiros[3]+" "+arrayInteiros[4]
+                    System.out.println("Ordem Atual: "+arrayInteiros[0]+" "+arrayInteiros[1]+" "+arrayInteiros[3]+" "+arrayInteiros[4]
                             +" "+arrayInteiros[5]+" "+arrayInteiros[6]+" "+arrayInteiros[7]+" "+arrayInteiros[8]+" "+arrayInteiros[9]);
 
                 }
