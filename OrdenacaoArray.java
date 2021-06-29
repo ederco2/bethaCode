@@ -24,6 +24,8 @@ public class OrdenacaoArray {
         }
         long fim = System.currentTimeMillis();
         System.out.println("Tempo ordenar 1: " + (fim - inicio) + " ms");
+
+
         for (int i = 1000; i > 0; i--) {
             arrayInteiro[arrayInteiro.length - i] = i;
 
