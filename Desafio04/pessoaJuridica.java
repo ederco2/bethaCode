@@ -35,4 +35,9 @@ public class pessoaJuridica extends pessoas{
     public void setCNAE(String CNAE) {
         this.CNAE = CNAE;
     }
+
+    @Override
+    public void getNumeroDocumento() {
+        System.out.println(getCnpj());
+    }
 }

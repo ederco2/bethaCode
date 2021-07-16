@@ -28,12 +28,12 @@ public class cliente extends pessoaFisica{
         this.limiteUtilizado = limiteUtilizado;
     }
 
-    Double aumentaLimite(Double aumento){
-         return limiteCretido+aumento;
+    public void aumentaLimite(Double aumento){
+          limiteCretido+=aumento;
     }
 
-    Double  diminuiLimite(Double diminui){
-         return limiteCretido+diminui;
+    public void  diminuiLimite(Double diminui){
+         limiteCretido-=diminui;
     }
 
     @Override
@@ -41,8 +41,6 @@ public class cliente extends pessoaFisica{
         return "cliente{" +
                 "limiteCretido=" + limiteCretido +
                 ", limiteUtilizado=" + limiteUtilizado +
-                ", aumento=" + aumento +
-                ", diminui=" + diminui +
                 "} " + super.toString();
     }
 }

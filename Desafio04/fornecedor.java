@@ -25,4 +25,12 @@ public class fornecedor extends pessoaJuridica{
     public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
+
+    @Override
+    public String toString() {
+        return "fornecedor{" +
+                "responsavel='" + responsavel + '\'' +
+                ", observacao='" + observacao + '\'' +
+                "} " + super.toString();
+    }
 }
