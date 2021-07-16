@@ -4,8 +4,8 @@ public class funcionario extends pessoaFisica{
     private Double salarioBruto;
     private Double salarioLiquido;
 
-    public funcionario(Integer id, String endereco, String telefone, Character cpf, Character rg, Character sexo, Double salarioBruto, Double salarioLiquido) {
-        super(id, endereco, telefone, cpf, rg, sexo);
+    public funcionario(Integer id, String nome, String endereco, String telefone, String cpf, String rg, String sexo, Double salarioBruto, Double salarioLiquido) {
+        super(id, nome, endereco, telefone, cpf, rg, sexo);
         this.salarioBruto = salarioBruto;
         this.salarioLiquido = salarioLiquido;
     }
@@ -24,5 +24,13 @@ public class funcionario extends pessoaFisica{
 
     public void setSalarioLiquido(Double salarioLiquido) {
         this.salarioLiquido = salarioLiquido;
+    }
+
+    @Override
+    public String toString() {
+        return "funcionario{" +
+                "salarioBruto=" + salarioBruto +
+                ", salarioLiquido=" + salarioLiquido +
+                "} " + super.toString();
     }
 }

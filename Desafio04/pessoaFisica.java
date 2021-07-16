@@ -1,38 +1,47 @@
 package Desafio04;
 
-public class pessoaFisica  extends pessoas{
-    private Character cpf;
-    private Character rg;
-    private Character sexo;
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
-    public Character getCpf() {
+public class pessoaFisica  extends pessoas{
+    private String cpf;
+    private String rg;
+    private String sexo;
+
+    public pessoaFisica(Integer id, String nome, String endereco, String telefone, String cpf, String rg, String sexo) {
+        super(id, nome, endereco, telefone);
+        this.cpf = cpf;
+        this.rg = rg;
+        this.sexo = sexo;
+    }
+
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(Character cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-    public Character getRg() {
+    public String getRg() {
         return rg;
     }
 
-    public void setRg(Character rg) {
+    public void setRg(String rg) {
         this.rg = rg;
     }
 
-    public Character getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(Character sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
-    public pessoaFisica(Integer id, String endereco, String telefone, Character cpf, Character rg, Character sexo) {
-        super(id, endereco, telefone);
-        this.cpf = cpf;
-        this.rg = rg;
-        this.sexo = sexo;
+    @Override
+    public void getNumeroDocumento() {
+        System.out.println(getCpf());
     }
+
+
 }
