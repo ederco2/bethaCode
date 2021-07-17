@@ -12,7 +12,7 @@ public class Desafio04Main {
         System.out.println(cliente);
 
         System.out.println("--------------------------");
-        funcionario.setSalarioBruto(1250.00);
+        funcionario.getAumento(250.00);
         System.out.println(funcionario);
         System.out.println("--------------------------");
         fornecedor.getNumeroDocumento();

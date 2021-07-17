@@ -26,6 +26,10 @@ public class funcionario extends pessoaFisica{
         this.salarioLiquido = salarioLiquido;
     }
 
+    public void getAumento(Double aumento){
+        this.salarioBruto += aumento;
+    }
+
     @Override
     public String toString() {
         return "funcionario{" +

@@ -40,4 +40,13 @@ public class pessoaJuridica extends pessoas{
     public void getNumeroDocumento() {
         System.out.println(getCnpj());
     }
+
+    @Override
+    public String toString() {
+        return "pessoaJuridica{" +
+                "cnpj='" + cnpj + '\'' +
+                ", inscricao='" + inscricao + '\'' +
+                ", CNAE='" + CNAE + '\'' +
+                "} " + super.toString();
+    }
 }
