@@ -1,6 +1,3 @@
-import com.sun.org.apache.xml.internal.utils.SystemIDResolver;
-
-import java.util.Arrays;
 
 public class PesquisaArray {
     public static void main(String[] args){
@@ -21,9 +18,9 @@ public class PesquisaArray {
         System.out.println("Pesquisa 1: "+(fim-inicio)+" ms");
 
         //SEGUNDA PESQUISA MAIS PERFORMATICA
-        inicio= System.currentTimeMillis();
-        Arrays.binarySearch(numerosInteiros,numeroPesquisado);
-        fim=System.currentTimeMillis();
-        System.out.println("Pesquisa 2: "+(fim-inicio)+" ms");
+        //inicio= System.currentTimeMillis();
+        ///Arrays.binarySearch(numerosInteiros,numeroPesquisado);
+        //fim=System.currentTimeMillis();
+        //System.out.println("Pesquisa 2: "+(fim-inicio)+" ms");
     }
 }
