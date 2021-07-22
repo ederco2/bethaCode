@@ -9,4 +9,9 @@ public class Analista extends Funcionario{
     public Double getSalarioBruto() {
         return super.getSalarioBruto()+super.getSalarioBruto()*0.10;
     }
+
+    @Override
+    public String toString() {
+        return "Analista{} " + super.toString();
+    }
 }

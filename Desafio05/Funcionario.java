@@ -44,4 +44,14 @@ public class Funcionario {
     public void setSalarioBruto(Double salarioBruto) {
         this.salarioBruto = salarioBruto;
     }
+
+    @Override
+    public String toString() {
+        return "Funcionario{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", salarioBruto=" + salarioBruto +
+                '}';
+    }
 }

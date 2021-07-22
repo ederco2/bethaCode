@@ -9,4 +9,9 @@ public class ArquitetoSoft extends Funcionario{
     public Double getSalarioBruto() {
         return getSalarioBruto()+getSalarioBruto()*0.15;
     }
+
+    @Override
+    public String toString() {
+        return "ArquitetoSoft{} " + super.toString();
+    }
 }

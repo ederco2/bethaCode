@@ -9,4 +9,9 @@ public class Estagiario extends Funcionario{
     public Double getSalarioBruto() {
         return super.getSalarioBruto()+super.getSalarioBruto()*0.05;
     }
+
+    @Override
+    public String toString() {
+        return "Estagiario{} " + super.toString();
+    }
 }

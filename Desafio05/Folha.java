@@ -5,12 +5,15 @@ import java.util.List;
 
 public class Folha {
     private Integer id;
-    private String funcionario;
+    private String nomeFuncionario;
     private Date dataPagamento;
     private List listaDescontos;
     private Double salarioLiquido;
 
-    void calcular(){
+
+    public void calcular(){
 
     }
+
+
 }
