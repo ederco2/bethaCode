@@ -1,22 +1,14 @@
 package Desafio05;
-
-import java.util.ArrayList;
-
 public class Descontos {
     Integer id;
     String descricao;
     Double valor;
-
-    ArrayList<Descontos> lista = new ArrayList<>();
-
-
 
     public Descontos(Integer id, String descricao, Double valor) {
         this.id = id;
         this.descricao = descricao;
         this.valor = valor;
     }
-
 
     public Integer getId() {
         return id;

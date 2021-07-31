@@ -7,7 +7,7 @@ public class Coordenador extends Funcionario{
 
     @Override
     public Double getSalarioBruto() {
-        return getSalarioBruto()+getSalarioBruto()*0.20;
+        return super.getSalarioBruto()+super.getSalarioBruto()*0.20;
     }
 
     @Override

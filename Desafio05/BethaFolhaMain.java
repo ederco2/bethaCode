@@ -2,24 +2,59 @@ package Desafio05;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class BethaFolhaMain {
     public static void main(String[] args) {
-        Funcionario funcionario = criaFuncionarioBuilder.criaFuncionarioBuilder("Estagiario");
+        Integer tipo;
+        Integer id;
+        String nome;
+        String cpf;
+        Double salarioBruto;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Informe o tipo do funcionairo:\n");
+        System.out.print("Estagiario: 1\n");
+        System.out.print("Analista: 2\n");
+        System.out.print("Arquiteto de Software: 3\n");
+        System.out.print("Coordenador: 4\n");
+        System.out.print("::");
+        tipo = sc.nextInt();
+
+        System.out.print("Informe o codigo do funcionario: ");
+        id = sc.nextInt();
+
+        System.out.print("Informe o nome: ");
+        nome = sc.next();
+
+        System.out.println("Informe o CPF: ");
+        cpf =  sc.next();
+
+        System.out.println("Informe o Salario:");
+        salarioBruto =  sc.nextDouble();
+
+        Funcionario funcionario = criaFuncionarioBuilder.criaFuncionarioBuilder(tipo,id,nome,cpf,salarioBruto);
         ArrayList<String> desconto = new ArrayList<>();
 
+
+        Folha folhaAgosto = new Folha(1,funcionario,"15/07/2021");
+        folhaAgosto.calcular();
+
+
         System.out.println(funcionario);
+
     }
 
     public class criaFuncionarioBuilder{
-        public static Funcionario criaFuncionarioBuilder(String tipo){
-            if (tipo.equals("Analista")) {
-                return new Analista(1,"eder","04371939937",1000.00);
-            }else if(tipo.equals("Estagiario")){
-                return new Estagiario(2,"jose","04785231644",500.00);
-            }else if (tipo.equals("Coordenador")){
-                return new Coordenador(3,"Bill","98765432115",700.00);
-            }else return new ArquitetoSoft(4,"Joe","15456954875",800.00);
+        public static Funcionario criaFuncionarioBuilder(Integer tipo, Integer id, String nome, String cpf, Double salarioBruto){
+            if (tipo==2) {
+                return new Analista(id,nome,cpf,salarioBruto);
+            }else if(tipo==1){
+                return new Estagiario(id,nome,cpf,salarioBruto);
+            }else if (tipo==4){
+                return new Coordenador(id,nome,cpf,salarioBruto);
+            }else return new ArquitetoSoft(id,nome,cpf,salarioBruto);
         }
     }
 }
